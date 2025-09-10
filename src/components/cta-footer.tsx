@@ -31,11 +31,20 @@ export function CTAFooter() {
             <p className="text-xl text-slate-300 text-pretty max-w-2xl mx-auto mb-8">
               Don&apos;t wait - book your appointment today and take the first step towards better health
             </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90">
+            <motion.div whileTap={{ scale: 0.95 }}>
+              <Button
+                size="lg"
+                className="text-lg px-8 py-6 bg-primary hover:bg-primary/60 cursor-pointer"
+                onClick={() =>
+                  document
+                    .getElementById("booking-form")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Your Appointment Now
               </Button>
+
             </motion.div>
           </motion.div>
 
